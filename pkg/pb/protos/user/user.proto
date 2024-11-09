@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "/user";
+
+service UserService{
+    rpc CreateUserProfile (CreateUserProfileRequest) returns (CreateUserProfileResponse);
+}
+
+message CreateUserProfileRequest {
+    string name = 1;
+    string email = 2;
+}
+
+message CreateUserProfileResponse{
+    int64 id = 1; // user ID
+    string name = 2; // user name
+    string email = 3; // user email
+}
