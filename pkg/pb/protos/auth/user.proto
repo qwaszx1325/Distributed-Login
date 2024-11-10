@@ -14,5 +14,5 @@ message CreateUserRequest {
 }
 
 message BoolResponse {
-    bool a = 1;
+    bool isRegistered = 1;
 }
